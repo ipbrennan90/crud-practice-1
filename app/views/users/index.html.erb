@@ -1,0 +1,12 @@
+<h1> Listing Users </h1>
+<%= link_to "New User", new_user_path, class: "btn btn-info" %>
+<% @users.each do |u| %>
+
+  <%= link_to u.first_name+" "+u.last_name, user_path(u) %>
+  <%= u.email %>
+  <%= u.password %>
+  <%= link_to "Edit", edit_user_path(u) %>
+  <%= link_to "Delete", user_path(u), method: :delete %>
+
+
+<% end %>

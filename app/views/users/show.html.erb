@@ -1,0 +1,9 @@
+<h1> <%= @user.first_name %> </h1>
+
+<%= @user.last_name %>
+<%= @user.email %>
+<%= @user.password %>
+
+s
+
+<%= link_to "Edit", edit_user_path(@user) %> | <%= link_to "Back", users_path %>
